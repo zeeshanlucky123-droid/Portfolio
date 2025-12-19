@@ -192,14 +192,79 @@
   }
 }
 
+@media (max-width: 968px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .education-grid {
+    gap: 1.25rem;
+  }
+
   .education-card {
     padding: 0;
+    border-radius: 18px;
   }
 
   .education-header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 1.25rem 1.25rem 0.875rem;
+  }
+
+  .education-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.4rem;
+  }
+
+  .education-body {
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  .education-degree {
+    font-size: 1.15rem;
+  }
+
+  .education-field {
+    font-size: 0.95rem;
+  }
+
+  .education-university {
+    font-size: 0.95rem;
+  }
+
+  .education-location {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-grid {
+    gap: 1rem;
+  }
+
+  .education-header {
+    padding: 1rem 1rem 0.75rem;
+  }
+
+  .education-body {
+    padding: 0 1rem 1rem;
+  }
+
+  .education-degree {
+    font-size: 1.05rem;
+  }
+
+  .education-field {
+    font-size: 0.9rem;
+  }
+
+  .education-university {
+    font-size: 0.9rem;
   }
 }
 

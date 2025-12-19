@@ -195,17 +195,78 @@
 }
 
 @media (max-width: 768px) {
+  .experience-grid {
+    gap: 1.25rem;
+  }
+
   .experience-card {
     padding: 0;
+    border-radius: 18px;
   }
 
   .card-header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 1.25rem 1.25rem 0.875rem;
+  }
+
+  .card-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
   }
 
   .card-date-location {
     text-align: left;
     width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .card-body {
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-company {
+    font-size: 0.95rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .highlight-tag {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-grid {
+    gap: 1rem;
+  }
+
+  .card-header {
+    padding: 1rem 1rem 0.75rem;
+  }
+
+  .card-body {
+    padding: 0 1rem 1rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-company {
+    font-size: 0.9rem;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
   }
 }

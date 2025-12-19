@@ -7,6 +7,9 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 body {
@@ -18,6 +21,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  width: 100%;
+  max-width: 100vw;
 }
 
 body::before {
@@ -236,8 +241,12 @@ code {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
   .section-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   
   .section {
@@ -247,6 +256,8 @@ code {
   .section-header {
     text-align: center;
     align-items: center;
+    margin-bottom: 2.5rem;
+    padding: 0 15px;
   }
 
   .section-header-content {
@@ -258,6 +269,35 @@ code {
   .title-underline {
     margin-left: 0;
     align-items: center;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+    padding: 0 12px;
+  }
+
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.85rem;
   }
 }
 
