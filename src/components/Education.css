@@ -1,0 +1,205 @@
+.education {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.education::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.education-card {
+  background: white;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid rgba(102, 126, 234, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--card-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover::before {
+  transform: scaleX(1);
+}
+
+.education-card:hover {
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+  border-color: var(--card-color);
+}
+
+.education-header {
+  padding: 1.5rem 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.education-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--card-color) 0%, var(--card-color) 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.education-card:hover .education-icon {
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.education-grade {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 20px;
+  color: var(--card-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.education-grade svg {
+  color: #fbbf24;
+}
+
+.education-body {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.education-degree {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.education-field {
+  font-size: 1rem;
+  color: var(--card-color);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.education-university {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.education-location {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+}
+
+.education-period {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: var(--bg-secondary);
+  border-radius: 15px;
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.education-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.skill-badge {
+  padding: 0.4rem 0.8rem;
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 15px;
+  font-size: 0.8rem;
+  color: var(--card-color);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover .skill-badge {
+  background: var(--card-color);
+  color: white;
+  border-color: var(--card-color);
+  transform: translateY(-2px);
+}
+
+.education-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(102, 126, 234, 0.1);
+  overflow: hidden;
+}
+
+.education-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--card-color) 0%, var(--card-color) 100%);
+  transition: width 0.5s ease;
+}
+
+@media (max-width: 968px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    padding: 0;
+  }
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
