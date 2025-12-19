@@ -44,38 +44,6 @@ const About = () => {
               ))}
             </div>
           </motion.div>
-          <motion.div
-            className="about-image"
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="image-card">
-              <motion.div
-                className="card-glow"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-              />
-              <div className="profile-image-wrapper">
-                <img 
-                  src="https://media.licdn.com/dms/image/v2/D4E35AQG3vWlr9QqqAg/profile-framedphoto-shrink_800_800/B4EZgGRxo7GwAs-/0/1752451980481?e=1766109600&v=beta&t=yMAzuudMv2xn16hqEX7LXrw6hXPJIqi_LFd36PgpjgY" 
-                  alt="Zeeshan Ahmed - Software Developer"
-                  className="profile-image"
-                  onError={(e) => {
-                    // Fallback if image path doesn't work
-                    e.target.style.display = 'none';
-                    e.target.nextElementSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="profile-fallback" style={{ display: 'none' }}>
-                  <span>ZA</span>
-                </div>
-                <div className="open-to-work-badge">
-                  <span className="badge-text">#OPENTOWORK</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
