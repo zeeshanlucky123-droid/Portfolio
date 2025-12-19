@@ -109,7 +109,15 @@ const Hero = () => {
             <motion.h1 className="hero-title" variants={itemVariants}>
               <span className="greeting">Hello, I'm</span>
               <span className="name">Zeeshan Ahmed</span>
-              <span className="title">Software Developer | React Native | Java | WordPress</span>
+              <span className="title">
+                <span className="title-line">Software Developer</span>
+                <span className="title-separator"> | </span>
+                <span className="title-line">React Native</span>
+                <span className="title-separator"> | </span>
+                <span className="title-line">Java</span>
+                <span className="title-separator"> | </span>
+                <span className="title-line">WordPress</span>
+              </span>
             </motion.h1>
             <motion.p className="hero-description" variants={itemVariants}>
               Full-Stack Developer specializing in React Native, WordPress, and AWS. 
